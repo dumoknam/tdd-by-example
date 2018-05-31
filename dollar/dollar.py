@@ -3,10 +3,10 @@ class Dollar(object):
     """docstring for Dollar"""
     def __init__(self, amount):
         super(Dollar, self).__init__()
-        self.amount = amount
+        self._amount = amount
 
     def times(self, multiplier):
-        return Dollar(self.amount * multiplier)
+        return Dollar(self._amount * multiplier)
 
     def __eq__(self, other):
         if isinstance(other, self.__class__):

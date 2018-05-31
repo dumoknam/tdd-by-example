@@ -3,11 +3,8 @@ from dollar import dollar
 
 def test_multiplication():
     d = dollar.Dollar(5)
-    product = d.times(2)
-    assert 10 == product.amount
-
-    product = d.times(3)
-    assert 15 == product.amount
+    assert dollar.Dollar(10) == d.times(2)
+    assert dollar.Dollar(15) == d.times(3)
 
 
 def test_equality():
