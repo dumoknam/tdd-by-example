@@ -1,4 +1,7 @@
-from dollar import dollar
+from money import (
+    dollar,
+    franc,
+)
 
 
 def test_multiplication():
@@ -10,3 +13,9 @@ def test_multiplication():
 def test_equality():
     assert dollar.Dollar(5) == dollar.Dollar(5)
     assert dollar.Dollar(5) != dollar.Dollar(6)
+
+
+def test_franc_multiplication():
+    f = franc.Franc(5)
+    assert franc.Franc(10) == f.times(2)
+    assert franc.Franc(15) == f.times(3)
